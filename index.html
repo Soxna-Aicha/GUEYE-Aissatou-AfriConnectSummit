@@ -15,6 +15,93 @@
 </head>
 
 <body>
+    <!------------NAVBAR------------------------->
+    <header>
+        <nav class="navbar-fixe">
+            <a href="index.html" class="logo">
+                <i class="bi bi-globe-europe-africa-fill"></i>
+                AfriConnectSummit
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Inscription & Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Changer le theme">
+                <i class="bi bi-moon-fill"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+        </nav>
+    </header>
+    <main>
+        <!------------HERO Section-------------------------->
+        <section class="hero">
+            <i class="bi bi-record-circle"></i>
+            <span>LE RENDEZ-VOUS TECH & INNOVATION EN AFRIQUE</span>
+            <h1>Connecter. Innover. Transformer l'Afrique.</h1>
+            <p>Rejoignez les leaders, innovateurs et entrepreneurs pour construire ensemble l'avenir du continent.</p>
+            <div class="cta-buttons">
+                <a href="contact.html">
+                    Réserver ma place
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="programme.html">Découvrir le programme</a>
+            </div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="jours">00</span>
+                    <span class="countdown-label">JOURS</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="heures">00</span>
+                    <span class="countdown-label">HEURES</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span class="countdown-label">MINUTES</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="secondes">00</span>
+                    <span class="countdown-label">SECONDES</span>
+                </div>
+            </div>
+            <div class="date-lieu">
+                <span><i class="bi bi-calendar-event"></i> 12 – 14 mars 2027</span>
+                <span><i class="bi bi-geo-alt"></i> Dakar, Sénégal</span>
+            </div>
+        </section>
+        <!------------- CHIFFRES CLÉS Section-------------------------->
+        <section class="stats">
+            <h2>Chiffres clés</h2>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <i class="bi bi-people-fill"></i>
+                    <span class="plus-symbol">+</span><span id="stat-participant" data-target="1200">0</span>
+                    <span class="card-label">Participants</span>
+                </div>
+                <div class="stat-card">
+                    <i class="bi bi-mic-fill"></i>
+                    <span id="stat-intervenant" data-target="48">0</span>
+                    <span class="card-label">Intervenants</span>
+                </div>
+                <div class="stat-card">
+                    <i class="bi bi-calendar3"></i>
+                    <span id="stat-jours" data-target="3">0</span>
+                    <span class="card-label">Jours</span>
+                </div>
+                <div class="stat-card">
+                    <i class="bi bi-globe2"></i>
+                    <span id="stat-pays" data-target="12">0</span>
+                    <span class="card-label">Pays</span>
+                </div>
+            </div>
+        </section>
+        
+    </main>
     <script src="js/main.js"></script>
 </body>
 
