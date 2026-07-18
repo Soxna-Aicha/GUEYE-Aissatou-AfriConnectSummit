@@ -15,11 +15,11 @@
 </head>
 
 <body>
-     <header>
-        <nav class="navbar-fixe" >
+    <header>
+        <nav class="navbar">
             <a href="index.html" class="logo">
                 <i class="bi bi-globe-europe-africa-fill"></i>
-                AfriConnectSummit
+                AfriConnect Summit
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
@@ -29,14 +29,484 @@
             </ul>
             <button class="theme-toggle" aria-label="Changer le theme">
                 <i class="bi bi-moon-fill"></i>
-            </button> 
+            </button>
             <button class="menu-toggle" aria-label="Ouvrir le menu">
                 <i class="bi bi-list"></i>
             </button>
 
         </nav>
     </header>
-    
+    <main>
+
+        <!--  HERO INTERNE  -->
+
+        <section class="page-hero contact-hero">
+
+            <div class="hero-content">
+
+                <nav class="filAriane" aria-label="Fil d'Ariane">
+
+                    <a href="index.html">Accueil</a>
+
+                    <span class="separator">
+                        <i class="bi bi-chevron-right"></i>
+                    </span>
+
+                    <span aria-current="page">Contact</span>
+
+                </nav>
+
+                <span class="section-badge">
+                    <i class="bi bi-envelope-paper-fill"></i>
+                    Inscription & Contact
+                </span>
+
+                <h1>Participez à AfriConnect Summit 2027</h1>
+
+                <p>
+                    Inscrivez-vous dès maintenant et rejoignez les leaders,
+                    entrepreneurs et innovateurs qui façonnent le numérique africain.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!--  FORMULAIRE D'INSCRIPTION SECTION  -->
+
+        <section class="contact-section">
+
+            <div class="contact-container">
+
+                <!-- ===== FORMULAIRE ===== -->
+
+                <div class="contact-form">
+
+                    <h2>Formulaire d'inscription</h2>
+
+                    <form id="registrationForm" novalidate>
+
+                        <div class="form-group">
+
+                            <label for="nom">Nom complet</label>
+
+                            <input type="text" id="nom" name="nom" required>
+
+                            <small class="error-message" id="error-nom"></small>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="email">Adresse e-mail</label>
+
+                            <input type="email" id="email" name="email" required>
+
+                            <small class="error-message" id="error-email"></small>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="phone">Téléphone</label>
+
+                            <input type="tel" id="phone" name="phone" required>
+
+                            <small class="error-message" id="error-phone"></small>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="participation">
+                                Type de participation
+                            </label>
+
+                            <select id="participation" name="participation" required>
+
+                                <option value="">
+                                    -- Choisir --
+                                </option>
+
+                                <option>Participant</option>
+                                <option>Intervenant</option>
+                                <option>Sponsor</option>
+                                <option>Presse</option>
+
+                            </select>
+
+                            <small class="error-message" id="error-participation"></small>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="country">
+                                Pays
+                            </label>
+
+                            <select id="country" name="country" required>
+
+                                <option value="">-- Choisir un pays --</option>
+
+                                <option>Sénégal</option>
+                                <option>Mali</option>
+                                <option>Guinée</option>
+                                <option>Gambie</option>
+                                <option>Burkina Faso</option>
+                                <option>Côte d'Ivoire</option>
+                                <option>Ghana</option>
+                                <option>Togo</option>
+                                <option>Bénin</option>
+                                <option>Nigeria</option>
+                                <option>Cameroun</option>
+                                <option>Maroc</option>
+                                <option>Tunisie</option>
+                                <option>Égypte</option>
+                                <option>Kenya</option>
+
+                            </select>
+
+                            <small class="error-message" id="error-country"></small>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="message">
+
+                                Motivation
+
+                            </label>
+
+                            <textarea id="message" name="message" rows="6" required>Écrivez votre motivation ici...</textarea>
+
+                            <small class="error-message" id="error-message"></small>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+
+                            Envoyer ma demande
+
+                            <i class="bi bi-send-fill"></i>
+
+                        </button>
+
+                        <div class="success-message" id="successMessage">
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!--  INFORMATIONS  -->
+
+                <div class="contact-info">
+
+                    <h2>Informations</h2>
+
+                    <div class="info-card">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <div>
+
+                            <h3>Adresse</h3>
+
+                            <p>Dakar, Sénégal</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <div>
+
+                            <h3>Téléphone</h3>
+
+                            <p>+221 77 123 00 00</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <div>
+
+                            <h3>Email</h3>
+
+                            <p>contact@africonnectsummit.africa</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <i class="bi bi-clock-fill"></i>
+
+                        <div>
+
+                            <h3>Horaires</h3>
+
+                            <p>Lundi - Vendredi<br>08h00 - 18h00</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FAQ SECTION -->
+
+        <section class="faq">
+
+            <h2>Questions fréquentes</h2>
+
+            <div class="faq-container">
+
+                <div class="faq-item">
+
+                    <input type="checkbox" id="faq1">
+
+                    <label for="faq1">
+
+                        Qui peut participer au sommet ?
+
+                    </label>
+
+                    <div class="faq-content">
+
+                        <p>
+                            Toute personne intéressée par la technologie,
+                            l'innovation ou l'entrepreneuriat.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <input type="checkbox" id="faq2">
+
+                    <label for="faq2">
+
+                        L'inscription est-elle obligatoire ?
+
+                    </label>
+
+                    <div class="faq-content">
+
+                        <p>
+
+                            Oui, une inscription est nécessaire afin
+                            d'obtenir votre badge d'accès.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <input type="checkbox" id="faq3">
+
+                    <label for="faq3">
+
+                        Le sommet est-il payant ?
+
+                    </label>
+
+                    <div class="faq-content">
+
+                        <p>
+
+                            Certaines activités sont gratuites,
+                            d'autres nécessitent un billet.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <input type="checkbox" id="faq4">
+
+                    <label for="faq4">
+
+                        Puis-je devenir sponsor ?
+
+                    </label>
+
+                    <div class="faq-content">
+
+                        <p>
+
+                            Oui, contactez notre équipe via ce formulaire.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <input type="checkbox" id="faq5">
+
+                    <label for="faq5">
+
+                        Où se déroule l'événement ?
+
+                    </label>
+
+                    <div class="faq-content">
+
+                        <p>
+
+                            Le sommet se tiendra à Dakar, au Sénégal.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--  GOOGLE MAPS  -->
+
+        <section class="map">
+
+            <h2>Nous localiser</h2>
+
+            <iframe src="https://www.google.com/maps?q=Dakar,+Senegal&output=embed" loading="lazy" allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Localisation d'AfriConnect Summit à Dakar, Sénégal">
+</iframe>
+
+        </section>
+
+    </main>
+    <!-- FOOTER SECTION -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+                <h3>
+                    <i class="bi bi-globe-europe-africa-fill"></i>
+                    AfriConnect Summit
+                </h3>
+                <p>Le sommet qui connecte les talents, stimule l'innovation et construit l'Afrique de demain.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Inscription & Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <div class="infos">
+                    <h3>Informations</h3>
+                    <ul>
+                        <li>
+                            <i class="bi bi-calendar-event-fill"></i>
+                            <time datetime="2027-03-12">12 – 14 mars 2027</time>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Dakar, Sénégal
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-at-fill"></i>
+                            contact@africonnectsummit.africa
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            +221 77 123 00 00
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="following">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <ul>
+                            <li>
+                                <a href="#" aria-label="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Linkedin">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" aria-label="X">
+                                    <i class="bi bi-twitter-x"></i>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Youtube">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <hr>
+        <div class="footer-bottom">
+
+            &copy; <span id="annee"></span> AfriConnect Summit — Tous droits réservés.
+
+        </div>
+        <button id="backToTop" aria-label="Retourner en haut de la page">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 

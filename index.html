@@ -11,16 +11,16 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>AfriConnectSummit2026 | index</title>
+    <title>AfriConnectSummit2026 | Accueil</title>
 </head>
 
 <body>
     <!------------NAVBAR------------------------->
     <header>
-        <nav class="navbar-fixe">
+        <nav class="navbar">
             <a href="index.html" class="logo">
                 <i class="bi bi-globe-europe-africa-fill"></i>
-                AfriConnectSummit
+                AfriConnect Summit
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" aria-current="page">Accueil</a></li>
@@ -45,11 +45,11 @@
             <h1>Connecter. Innover. Transformer l'Afrique.</h1>
             <p>Rejoignez les leaders, innovateurs et entrepreneurs pour construire ensemble l'avenir du continent.</p>
             <div class="cta-buttons">
-                <a href="contact.html">
+                <a class="btn btn-primary" href="contact.html">
                     Réserver ma place
                     <i class="bi bi-arrow-right"></i>
                 </a>
-                <a href="programme.html">Découvrir le programme</a>
+                <a class="btn btn-secondary" href="programme.html">Découvrir le programme</a>
             </div>
             <div class="countdown">
                 <div class="countdown-item">
@@ -70,8 +70,15 @@
                 </div>
             </div>
             <div class="date-lieu">
-                <span><i class="bi bi-calendar-event"></i> 12 – 14 mars 2027</span>
-                <span><i class="bi bi-geo-alt"></i> Dakar, Sénégal</span>
+                <span>
+                    <i class="bi bi-calendar-event"></i>
+                    <time datetime="2027-03-12">12 – 14 mars 2027</time>
+                </span>
+
+                <span>
+                    <i class="bi bi-geo-alt"></i>
+                    Dakar, Sénégal
+                </span>
             </div>
         </section>
         <!------------- CHIFFRES CLÉS Section-------------------------->
@@ -100,8 +107,221 @@
                 </div>
             </div>
         </section>
-        
+        <!------------- POURQUOI PARTICIPER -------------------------->
+        <section class="why">
+            <h2>Pourquoi participer ?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <i class="bi bi-lightbulb-fill"></i>
+                    <h3>S'inspirer</h3>
+                    <p>Découvrez des idées révolutionnaires et des retours d'expérience exclusifs.</p>
+                </div>
+
+                <div class="why-item">
+                    <i class="bi bi-diagram-3-fill"></i>
+                    <h3>Se connecter</h3>
+                    <p>Rencontrez des leaders, des experts et des partenaires potentiels.</p>
+                </div>
+
+                <div class="why-item">
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+                    <h3>Innover</h3>
+                    <p>Explorez les dernières tendances et technologies de demain</p>
+                </div>
+            </div>
+        </section>
+        <!-------------  INTERVENANTS VEDETTES Section -------------------------->
+        <section class="speakers">
+            <h2>Intervenants vedettes</h2>
+            <a href="intervenants.html">
+                Voir tous les intervenants
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            <div class="speakers-grid">
+                <article class="speakers-card">
+                    <img src="images/Amadou.jpg" alt="Portrait de Dr Amadou Diallo">
+                    <h3>Dr.Amadou Diallo</h3>
+                    <p>CEO, TechNova</p>
+                    <span class="country">Sénégal</span>
+                </article>
+                <article class="speakers-card">
+                    <img src="images/Aicha.jpg" alt="Portrait de Aicha Kouyaté">
+                    <h3>Aicha Kouyaté</h3>
+                    <p>Fondatrice, AfricaLab</p>
+                    <span class="country">Mali</span>
+                </article>
+                <article class="speakers-card">
+                    <img src="images/Koffi.jpg" alt="Portrait de koffi Mensah">
+                    <h3>Koffi Mensah</h3>
+                    <p>CTO, DataVision</p>
+                    <span class="country">Ghana</span>
+                </article>
+                <article class="speakers-card">
+                    <img src="images/Nadia.jpg" alt="Portrait de Nadia Eltayeb">
+                    <h3>Nadia Eltayeb</h3>
+                    <p>UX Lead, Nile Design</p>
+                    <span class="country">Egypte</span>
+                </article>
+            </div>
+        </section>
+        <!------------- SECTION SPONSORS -------------------------->
+        <!-- SECTION SPONSORS -->
+        <section class="sponsors">
+            <h2>Nos partenaires</h2>
+
+            <div class="sponsors-container">
+
+                <article class="sponsors-card sponsor-or">
+                    <h3>Or</h3>
+                    <div class="sponsor-list">
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/orange.svg" alt="Logo Orange">
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/visa.svg" alt="Logo Visa">
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/mtn.svg" alt="Logo MTN">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="sponsors-card sponsor-argent">
+                    <h3>Argent</h3>
+                    <div class="sponsor-list">
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/wave.svg" alt="Logo Wave">
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/ecobank.svg" alt="Logo Ecobank">
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/sonatel.svg" alt="Logo Sonatel">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="sponsors-card sponsor-bronze">
+                    <h3>Bronze</h3>
+                    <div class="sponsor-list">
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/jumia.svg" alt="Logo Jumia">
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/flutterwave.svg" alt="Logo Flutterwave">
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/paydunya.svg" alt="Logo PayDunya">
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
+     <!-- FOOTER SECTION -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+                <h3>
+                    <i class="bi bi-globe-europe-africa-fill"></i>
+                    AfriConnect Summit
+                </h3>
+                <p>Le sommet qui connecte les talents, stimule l'innovation et construit l'Afrique de demain.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Inscription & Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <div class="infos">
+                    <h3>Informations</h3>
+                    <ul>
+                        <li>
+                            <i class="bi bi-calendar-event-fill"></i>
+                            <time datetime="2027-03-12">12 – 14 mars 2027</time>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Dakar, Sénégal
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-at-fill"></i>
+                            contact@africonnectsummit.africa
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            +221 77 123 00 00
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="following">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <ul>
+                            <li>
+                                <a href="#" aria-label="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Linkedin">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" aria-label="X">
+                                    <i class="bi bi-twitter-x"></i>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Youtube">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <hr>
+        <div class="footer-bottom">
+
+            &copy; <span id="annee"></span> AfriConnect Summit — Tous droits réservés.
+
+        </div>
+        <button id="backToTop" aria-label="Retourner en haut de la page">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 
