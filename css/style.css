@@ -1,0 +1,424 @@
+:root {
+
+    /*  COULEURS  */
+
+    /* Mode clair  */
+
+    --couleur-fond: #F8F7F5;
+    --couleur-texte: #2C2C2C;
+
+    --couleur-accent: #B8860B;
+    --couleur-secondaire: #8B5E3C;
+
+    --couleur-bordure: #E7E3DB;
+    --couleur-carte: #FFFFFF;
+    --fond-navbar: rgba(255, 255, 255, 0.8);
+
+    /*  TYPOGRAPHIE  */
+
+    --police-titres: "Space Grotesk", sans-serif;
+    --police-texte: "Manrope", sans-serif;
+
+    /*  ESPACEMENTS  */
+
+    --espacement-petit: 0.5rem;
+    --espacement-moyen: 1rem;
+    --espacement-grand: 2rem;
+    --espacement-tres-grand: 4rem;
+
+    /* CONTENEUR  */
+
+    --largeur-conteneur: 1200px;
+
+    /*  ARRONDIS  */
+
+    --rayon-petit: 8px;
+    --rayon-bordure: 12px;
+    --rayon-grand: 20px;
+
+    /*  OMBRES  */
+
+    --ombre-legere: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --ombre-moyenne: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    /*  TRANSITION  */
+
+    --transition: 0.3s ease;
+
+}
+
+/*  MODE SOMBRE  */
+
+[data-theme="dark"] {
+
+    --couleur-fond: #18181B;
+    --couleur-texte: #F5F5F4;
+
+    --couleur-bordure: #34343A;
+    --couleur-carte: #242428;
+    --fond-navbar: rgba(24, 24, 27, 0.8);
+
+}
+
+/* Reinitialisation */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* pour que la largeur soit egale a la largeur de l'element */
+}
+
+html {
+    scroll-behavior: smooth;
+    /* pour scroller doucement et de maniere fluide */
+}
+
+body {
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    /* meme police, meme taille que leur element parent */
+    border: none;
+    background: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+body {
+    font-family: var(--police-texte);
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.5;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+/* TYPOGRAPHIE */
+
+h1,
+h2,
+h3 {
+    font-family: var(--police-titres);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--espacement-moyen) var(--espacement-grand);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    background-color: var(--fond-navbar);
+    box-shadow: var(--ombre-legere);
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--espacement-petit);   
+}
+.logo i {
+    font-size: 2rem;
+    color: var(--couleur-accent);
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+.logo-title {
+    font-family: var(--police-titres);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--couleur-texte);
+}
+
+.logo-subtitle {
+    font-family: var(--police-titres);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--couleur-accent);
+    text-align: center;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--espacement-grand);
+}
+.nav-links a {
+    color: var(--couleur-texte);
+    font-weight: 500;
+    transition: var(--transition);
+    
+    
+}
+.nav-links a[aria-current="page"] {
+    color: var(--couleur-accent);
+}
+.nav-links a:hover {
+    color: var(--couleur-accent);
+}
+.theme-toggle {
+    width: 42px;
+    height: 24px;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--couleur-accent);
+    transition: var(--transition);
+    background-color: var(--couleur-blanc);
+
+}
+.menu-toggle {
+    width: 40px;
+    height: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--couleur-texte);
+    font-size: 2.5rem;
+}
+main {
+    padding-top: 90px;
+}
+/* HERO */
+.hero {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--espacement-grand);
+    padding: var(--espacement-tres-grand);
+}
+/* BADGE */
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espacement-petit);
+
+    padding: 0.6rem 1.2rem;
+
+    background-color: rgba(184, 134, 11, 0.1);
+
+    border: 1px solid rgba(184, 134, 11, 0.3);
+
+    border-radius: 999px;
+}
+.hero-badge i {
+    color: var(--couleur-accent);
+    font-size: 0.8rem;
+}
+.hero-badge span {
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08rem;
+
+    text-transform: uppercase;
+
+    color: var(--couleur-accent);
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-top: var(--espacement-moyen);
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 1.2rem;
+    color: var(--couleur-texte);
+}
+.text-stylise {
+    color: var(--couleur-accent);
+}
+/* BOUTONS CTA */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espacement-petit);
+    padding: 0.9rem 1.8rem;
+    border-radius: var(--rayon-bordure);
+    font-family: var(--police-titres);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+.btn i {
+    font-size: 0.9rem;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+.btn-primary {
+    background-color: var(--couleur-accent);
+    color: #FFFFFF;
+    border: 2px solid var(--couleur-accent);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--couleur-accent);
+    border: 2px solid var(--couleur-accent);
+}
+.btn-primary:hover {
+    background-color: var(--couleur-secondaire);
+    border-color: var(--couleur-secondaire);
+    transform: translateY(-3px);
+    box-shadow: var(--ombre-moyenne);
+}
+.btn-secondary:hover {
+    background-color: var(--couleur-accent);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: var(--ombre-moyenne);
+}
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espacement-moyen);
+    flex-wrap: wrap;
+}
+/* COMPTE À REBOURS */
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espacement-moyen);
+    flex-wrap: wrap;
+    margin-top: var(--espacement-grand);
+}
+
+.countdown-item {
+    min-width: 110px;
+    padding: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-bordure);
+
+    box-shadow: var(--ombre-legere);
+    transition: var(--transition);
+}
+
+.countdown-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ombre-moyenne);
+}
+
+.countdown-item span:first-child {
+    font-family: var(--police-titres);
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--couleur-texte);
+}
+
+.countdown-label {
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    color: var(--couleur-texte);
+}
+/* DATE & LIEU  */
+
+.date-lieu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espacement-grand);
+
+    margin-top: var(--espacement-grand);
+
+    flex-wrap: wrap;
+}
+
+.date-lieu span {
+    display: flex;
+    align-items: center;
+    gap: var(--espacement-petit);
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    color: var(--couleur-texte);
+}
+
+.date-lieu i {
+    color: var(--couleur-accent);
+    font-size: 1.1rem;
+}
+
+.date-lieu time {
+    font-weight: 600;
+}
+.styletime {
+    color: var(--couleur-accent);
+}
