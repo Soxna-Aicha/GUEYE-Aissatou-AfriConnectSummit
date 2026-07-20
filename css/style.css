@@ -422,3 +422,355 @@ main {
 .styletime {
     color: var(--couleur-accent);
 }
+/* SECTION STATISTIQUES */
+.stats {
+    padding: var(--espacement-tres-grand) var(--espacement-grand);
+    text-align: center;
+}
+.stats h2 {
+    margin-bottom: var(--espacement-tres-grand);
+}
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--espacement-grand);
+}
+.stat-card {
+    background-color: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-bordure);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--espacement-moyen);
+    box-shadow: var(--ombre-legere);
+    transition: var(--transition);
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-moyenne);
+}
+.stat-card i {
+    font-size: 2.2rem;
+    color: var(--couleur-accent);
+}
+.stat-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#stat-participant,
+#stat-intervenant,
+#stat-jours,
+#stat-pays {
+    font-family: var(--police-titres);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--couleur-texte);
+}
+.plus-symbol {
+    font-family: var(--police-titres);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--couleur-texte);
+}
+.card-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--couleur-texte-attenue);
+}
+/* POURQUOI PARTICIPER */
+.why {
+    padding: var(--espacement-tres-grand) var(--espacement-grand);
+    text-align: center;
+}
+.why h2 {
+    margin-bottom: var(--espacement-tres-grand);
+}
+.why-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--espacement-grand);
+    flex-wrap: wrap;
+}
+.why-item {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-bordure);
+    box-shadow: var(--ombre-legere);
+    transition: var(--transition);
+}
+.why-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-moyenne);
+}
+.why-item i {
+    font-size: 2.5rem;
+    color: var(--couleur-accent);
+    margin-bottom: var(--espacement-moyen);
+}
+.why-item h3 {
+    margin-bottom: var(--espacement-moyen);
+}
+.why-item p {
+    color: var(--couleur-texte);
+}
+
+/* INTERVENANTS VEDETTES */
+.speakers {
+    padding: var(--espacement-tres-grand) var(--espacement-grand);
+    text-align: center;
+}
+.speakers h2 {
+    margin-bottom: var(--espacement-moyen);
+}
+.speakers > a {
+    display: inline-block;
+    margin-bottom: var(--espacement-tres-grand);
+    color: var(--couleur-accent);
+    font-weight: 600;
+    transition: var(--transition);
+}
+.speakers > a:hover {
+    color: var(--couleur-secondaire);
+}
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--espacement-grand);
+}
+.speakers-card {
+    background-color: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-bordure);
+    overflow: hidden;
+    box-shadow: var(--ombre-legere);
+    transition: var(--transition);
+}
+.speakers-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-moyenne);
+}
+.speakers-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.speakers-card img.cadrage {
+    object-position: top;
+}
+.speakers-card h3,
+.speakers-card p {
+    padding: 0 var(--espacement-moyen);
+}
+.speakers-card h3 {
+    margin-top: var(--espacement-moyen);
+}
+.speakers-card p {
+    margin: var(--espacement-petit) 0;
+}
+.country {
+    display: inline-block;
+    margin-bottom: var(--espacement-moyen);
+    padding: 0 var(--espacement-moyen);
+    color: var(--couleur-accent);
+    font-weight: 600;
+}
+
+/* SPONSORS */
+.sponsors {
+    padding: var(--espacement-tres-grand) var(--espacement-grand);
+    text-align: center;
+}
+.sponsors h2 {
+    margin-bottom: var(--espacement-tres-grand);
+}
+.sponsors-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--espacement-grand);
+    flex-wrap: wrap;
+}
+.sponsors-card {
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-bordure);
+    box-shadow: var(--ombre-legere);
+}
+.sponsor-or {
+    flex: 1.6;
+}
+.sponsor-argent {
+    flex: 1.2;
+}
+.sponsor-bronze {
+    flex: 0,9;
+}
+.sponsor-or h3 {
+    font-size: 1.8rem;
+    color: var(--couleur-accent);
+}
+.sponsor-argent h3 {
+    font-size: 1.5rem;
+    color: var(--couleur-texte);
+}
+.sponsor-bronze h3 {
+    font-size: 1.2rem;
+    color: var(--couleur-accent);
+}
+.sponsors-card h3 {
+    margin-bottom: var(--espacement-grand);
+}
+.sponsor-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacement-moyen);
+}
+.sponsor-item {
+    padding: 0.8rem;
+    background-color: var(--couleur-fond);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-petit);
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+.sponsor-item:hover {
+    background-color: var(--couleur-accent);
+    color: #FFFFFF;
+}
+
+.sponsor-or .sponsor-item {
+    padding: 1.1rem;
+    font-size: 1.05rem;
+}
+.sponsor-argent .sponsor-item {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+}
+.sponsor-bronze .sponsor-item {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+}
+/* FOOTER */
+footer {
+    padding: var(--espacement-tres-grand) var(--espacement-grand)
+             var(--espacement-grand);
+    background-color: var(--couleur-carte);
+    border-top: 1px solid var(--couleur-bordure);
+}
+.footer-container {
+    max-width: var(--largeur-conteneur);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--espacement-tres-grand);
+}
+.footer-column h3 {
+    margin-bottom: var(--espacement-moyen);
+    color: var(--couleur-accent);
+}
+.footer-column p {
+    line-height: 1.7;
+}
+/* LIENS RAPIDES */
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacement-moyen);
+}
+.footer-column a {
+    transition: var(--transition);
+}
+.footer-column a:hover {
+    color: var(--couleur-accent);
+}
+/* INFORMATIONS */
+.infos ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacement-moyen);
+}
+.infos li {
+    display: flex;
+    align-items: center;
+    gap: var(--espacement-petit);
+}
+.infos i {
+    color: var(--couleur-accent);
+}
+/* RESEAUX SOCIAUX */
+.following {
+    margin-top: var(--espacement-grand);
+}
+.social-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: var(--espacement-moyen);
+}
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 50%;
+    color: var(--couleur-accent);
+    transition: var(--transition);
+}
+.social-links a:hover {
+    background-color: var(--couleur-accent);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+footer hr {
+    margin: var(--espacement-tres-grand) 0
+            var(--espacement-grand);
+    border: none;
+    border-top: 1px solid var(--couleur-bordure);
+}
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    padding-top: var(--espacement-moyen);
+}
+/* BOUTON RETOUR EN HAUT */
+#backToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--couleur-accent);
+    color: #FFFFFF;
+    box-shadow: var(--ombre-moyenne);
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+}
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+#backToTop:hover {
+    background-color: var(--couleur-secondaire);
+    transform: translateY(-4px);
+}
