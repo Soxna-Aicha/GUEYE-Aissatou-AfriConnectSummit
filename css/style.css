@@ -146,6 +146,9 @@ p {
 
 /* NAVBAR */
 
+/* ==============================
+   NAVBAR
+============================== */
 .navbar {
     position: fixed;
     top: 0;
@@ -157,8 +160,21 @@ p {
     padding: var(--espacement-moyen) var(--espacement-grand);
     backdrop-filter: blur(12px);
     z-index: 1000;
+
+    background-color: transparent;
+    box-shadow: none;
+    overflow: visible;
+
+    transition:
+        background-color var(--transition),
+        box-shadow var(--transition),
+        padding var(--transition);
+}
+
+.navbar.scrolled {
     background-color: var(--fond-navbar);
-    box-shadow: var(--ombre-legere);
+    box-shadow: var(--ombre-moyenne);
+    padding: 0.8rem var(--espacement-grand);
 }
 
 .logo {
@@ -987,6 +1003,10 @@ footer hr {
 .tab-content.active {
     display: block;
 }
+.tab-button.active{
+    background-color: var(--couleur-accent);
+    color: #FFFFFF;
+}
 
 /* Tableau */
 
@@ -1322,277 +1342,258 @@ footer hr {
     color: var(--couleur-texte);
 }
 
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* RESPONSIVE (les media query) */
-/* TABLETTE */
-@media (max-width: 768px) {
-    /* NAVBAR */
-    .navbar {
-        padding: var(--espacement-moyen) var(--espacement-grand);
+/* ==================================================
+   RESPONSIVE TABLETTE & SMARTPHONE (768px)
+================================================== */
+@media (max-width:768px){
+
+    /* ==============================
+       NAVBAR
+    ============================== */
+    .navbar{
+        padding:var(--espacement-moyen);
     }
-    .nav-links {
-        display: none;
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+
+        width:100%;
+
+        flex-direction:column;
+        align-items:center;
+        gap:var(--espacement-moyen);
+
+        padding:var(--espacement-grand);
+
+        background-color:var(--fond-navbar);
+        backdrop-filter:blur(12px);
+
+        box-shadow:var(--ombre-moyenne);
     }
-    .menu-toggle {
-        display: flex;
+
+    .nav-links.active{
+        display:flex;
     }
-    /* HERO */
-    .hero {
-        padding: 9rem 2rem 5rem;
+
+    .nav-links li{
+        width:100%;
+        text-align:center;
     }
-    h1 {
-        font-size: 2.5rem;
+
+    .nav-links a{
+        display:block;
+        padding:1rem;
     }
-    h2 {
-        font-size: 2rem;
+
+    .menu-toggle{
+        display:flex;
     }
-    .cta-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
+
+    /* ==============================
+       HERO ACCUEIL
+    ============================== */
+    .hero{
+        padding:8rem 2rem 4rem;
     }
-    /* HERO PAGE*/
-    .page-hero {
-        padding: 9rem 2rem 5rem;
+
+    h1{
+        font-size:2.5rem;
     }
-    /* COUNTDOWN */
-    .countdown {
-        justify-content: center;
-        flex-wrap: wrap;
+
+    h2{
+        font-size:2rem;
     }
-    /* DATE ET LIEU */
-    .date-lieu {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: var(--espacement-grand);
+
+    .hero-content{
+        max-width:100%;
     }
-    /* STATS */
-    .stat-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    .cta-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
     }
-    /* POURQUOI PARTICIPER */
-    .why-grid {
-        justify-content: center;
+
+    /* ==============================
+       HERO PAGES INTERNES
+    ============================== */
+    .page-hero{
+        padding:8rem 2rem 4rem;
     }
-    .why-item {
-        flex: 1 1 300px;
+
+    /* ==============================
+       COUNTDOWN
+    ============================== */
+    .countdown{
+        flex-wrap:wrap;
+        justify-content:center;
     }
-    /* INTERVENANTS */
-    .speakers-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    /* ==============================
+       STATS
+    ============================== */
+    .stat-grid{
+        grid-template-columns:repeat(2,1fr);
     }
-    .speakers-card img {
-        height: 250px;
+
+    /* ==============================
+       POURQUOI PARTICIPER
+    ============================== */
+    .why-grid{
+        flex-direction:column;
     }
-    /* SPONSORS */
-    .sponsors-container {
-        flex-direction: column;
+
+    /* ==============================
+       INTERVENANTS ACCUEIL
+    ============================== */
+    .speakers-grid{
+        grid-template-columns:repeat(2,1fr);
     }
-    /* THEMATIQUE */
-    .themes-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    /* ==============================
+       SPONSORS
+    ============================== */
+    .sponsors-container{
+        flex-direction:column;
     }
-    /* PROGRAMME */
-    .programme-tabs {
-        justify-content: center;
-        flex-wrap: wrap;
+
+    /* ==============================
+       PROGRAMME
+    ============================== */
+    .programme-tabs{
+        flex-wrap:wrap;
+        justify-content:center;
     }
-    .programme-table {
-        display: block;
-        overflow-x: auto;
+
+    .programme-table{
+        font-size:.95rem;
+        overflow-x:auto;
     }
-    /* CONTACT */
-    .contact-container {
-        flex-direction: column;
+
+    /* ==============================
+       THÉMATIQUES
+    ============================== */
+    .themes-grid{
+        grid-template-columns:repeat(2,1fr);
     }
-    .contact-form,
-    .contact-info {
-        width: 100%;
+
+    /* ==============================
+       PAGE INTERVENANTS
+    ============================== */
+    .intervenants-grid{
+        grid-template-columns:repeat(2,1fr);
     }
-    /* FOOTER */
-    .footer-container {
-        grid-template-columns: 2fr 1fr;
-        gap: var(--espacement-grand);
+
+    /* ==============================
+       CONTACT
+    ============================== */
+    .contact-container{
+        flex-direction:column;
     }
-    .footer-column:last-child {
-        grid-column: span 2;
+
+    /* ==============================
+       FOOTER
+    ============================== */
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
     }
-    /* BACKTOP TOP */
-    #backToTop {
-        right: 1.5rem;
-        bottom: 1.5rem;
+
+    .social-links ul{
+        justify-content:center;
     }
+
+    /* ==============================
+       BACK TO TOP
+    ============================== */
+    #backToTop{
+        right:1rem;
+        bottom:1rem;
+    }
+
 }
 /* SMARTPHONE (375) */
-@media (max-width:375px) {
+/* ==================================================
+   RESPONSIVE SMARTPHONE (375px)
+================================================== */
+@media (max-width:375px){
 
-    /* NAVBAR */
-    .navbar {
-        padding: var(--espacement-moyen);
-    }
-
-    .nav-links {
-        display: none;
+    h1{
+        font-size:2rem;
     }
 
-    .menu-toggle {
-        display: flex;
+    h2{
+        font-size:1.7rem;
     }
 
-    .theme-toggle {
-        width: 32px;
-        height: 18px;
+    p{
+        font-size:.95rem;
     }
 
-    .logo-title {
-        font-size: 1rem;
+    .hero,
+    .page-hero{
+        padding:7rem 1rem 3rem;
     }
 
-    .logo-subtitle {
-        font-size: .75rem;
+    .cta-buttons{
+        flex-direction:column;
     }
 
-    .hero {
-        padding: 8rem 1rem 4rem;
+    .btn{
+        width:100%;
     }
 
-    h1 {
-        font-size: 2rem;
+    .countdown-item{
+        min-width:90px;
     }
 
-    h2 {
-        font-size: 1.7rem;
+    .date-lieu{
+        flex-direction:column;
+        gap:.8rem;
     }
 
-    p {
-        font-size: .95rem;
+    .stat-grid,
+    .speakers-grid,
+    .themes-grid,
+    .intervenants-grid{
+        grid-template-columns:1fr;
     }
 
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
+    .programme-tabs{
+        flex-direction:column;
     }
 
-    .btn {
-        width: 100%;
+    .programme-table{
+        font-size:.85rem;
     }
 
-    .page-hero {
-        padding: 8rem 1rem 4rem;
-    }
-
-    /* COUNTDOWN */
-    .countdown {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .countdown-item {
-        min-width: 90px;
-    }
-
-    /* DATE & LIEU */
-    .date-lieu {
-        flex-direction: column;
-        gap: .8rem;
-    }
-
-    /* SECTIONS */
-    .stats,
-    .why,
-    .speakers,
-    .sponsors,
-    .programme,
-    .themes,
-    .cta,
-    .faq,
-    .contact-section,
-    .map {
-        padding: var(--espacement-grand) var(--espacement-moyen);
-    }
-
-    /* STATS */
-    .stat-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* POURQUOI PARTICIPER */
-    .why-grid {
-        flex-direction: column;
-    }
-
-    /* INTERVENANTS */
-    .speakers-grid {
-        grid-template-columns: 1fr;
-    }
-    .speakers-card img {
-        height: 220px;
-    }
-
-    /* SPONSORS */
-    .sponsors-container {
-        flex-direction: column;
-    }
-
-    /* THEMATIQUES */
-    .themes-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* PROGRAMME */
-    .programme-tabs {
-        flex-direction: column;
-    }
-
-     .programme-table {
-        display: block;
-        overflow-x: auto;
-        font-size: 0.85rem;
-    }
-
-    /* CONTACT : formulaire en 1 colonne */
-    .contact-container {
-        flex-direction: column;
-    }
-    .contact-form,
-    .contact-info {
-        width: 100%;
-    }
-
-    /* FAQ */
-    .faq-item {
-        padding: 0 var(--espacement-moyen);
-    }
-
-    /* FOOTER  */
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .social-links ul {
-        justify-content: center;
-    }
-
-    /* BACK TO TOP */
-    #backToTop {
-        right: 1rem;
-        bottom: 1rem;
-    }
 }
+
 /* DARK MODE */
 [data-theme="dark"] .hero {
     background-image:
-        linear-gradient(
-            rgba(24, 24, 27, .88),
-            rgba(24, 24, 27, .88)
-        ),
+        linear-gradient(rgba(24, 24, 27, .88),
+            rgba(24, 24, 27, .88)),
         url("../images/accueil.jpg");
 }
 
 [data-theme="dark"] .page-hero {
     background-image:
-        linear-gradient(
-            rgba(24, 24, 27, .80),
-            rgba(24, 24, 27, .80)
-        ),
+        linear-gradient(rgba(24, 24, 27, .80),
+            rgba(24, 24, 27, .80)),
         url("../images/header.jpg");
 }
